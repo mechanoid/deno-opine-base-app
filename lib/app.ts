@@ -6,5 +6,6 @@ const relative = relativePath(import.meta);
 
 app.set("views", relative("../views"));
 app.engine(".pug", renderFile);
+app.set("view engine", "pug");
 
 export { app };
