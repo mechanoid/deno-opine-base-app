@@ -1,0 +1,9 @@
+#!/bin/bash
+
+deno compile \
+  --lock=lock.json --cached-only \
+  --allow-env=PORT \
+  --allow-read=.,.env,.env.defaults \
+  --allow-net \
+    index.ts \
+  -- --optimize-for-size
